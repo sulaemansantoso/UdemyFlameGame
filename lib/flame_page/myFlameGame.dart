@@ -23,6 +23,7 @@ class MyFlameGame extends FlameGame with TapCallbacks {
         size: size));
     add(pShip = playerShip(Vector2(200, 200)));
     pDirection = pShip.position;
+    overlays.add('StartMenu');
     return super.onLoad();
   }
 

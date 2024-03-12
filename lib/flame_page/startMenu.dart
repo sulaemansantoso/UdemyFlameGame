@@ -9,11 +9,32 @@ class StartMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Column(
-        children: [
-          const Text("Start Menu"),
-          FloatingActionButton(onPressed: onPressed)
-        ],
+      color: Colors.transparent,
+      child: Center(
+        child: Wrap(
+          children: [
+            Card(
+              color: Colors.black.withAlpha(200),
+              elevation: 10,
+              margin: const EdgeInsets.all(20),
+              child: Container(
+                margin: const EdgeInsets.all(200),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Start Menu",
+                        style: TextStyle(
+                          color: Colors.white,
+                        )),
+                    FloatingActionButton(
+                        onPressed: onPressed, child: const Text("Start")),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
